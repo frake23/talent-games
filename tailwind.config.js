@@ -75,7 +75,7 @@ module.exports = {
             fontStyle: 'normal',
             fontWeight: 'normal',
             fontSize: '20px',
-            lineHeight: '27px',
+            lineHeight: '28px',
             letterSpacing: '0.0015em'
           },
           '.text-subtitle1': {
