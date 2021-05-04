@@ -1,5 +1,10 @@
 import React from 'react';
 
-export default function () {
-
+const AppPage: React.FC = () => {
+    return (
+        <>
+        </>
+    )
 }
+
+export default AppPage;
