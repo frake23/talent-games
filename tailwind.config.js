@@ -1,6 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin');
 
+const containerScreens = Object.assign({}, defaultTheme.screens);
+delete containerScreens['2xl'];
 
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -16,10 +18,12 @@ module.exports = {
       blue: {
         dark: "#1C2554",
         light: "#F8FFFF"
-      }
+      },
+      white: "#ffffff"
     },
     container: {
-      screens: defaultTheme.screens.filter(s => s !== '2xl')
+      screens: containerScreens,
+      center: true
     }
   },
   variants: {
