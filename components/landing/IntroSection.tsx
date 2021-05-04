@@ -3,7 +3,7 @@ import TWContainer from "../tailwind/TWContainer";
 import TWGrid from "../tailwind/TWGrid";
 import {TWButton, TWButtonColor, TWButtonSize} from "../tailwind/TWButton";
 
-const IntroSection: React.FC = () => {
+const IntroSection = () => {
     return (
         <div className="xl:py-40">
             <TWContainer>

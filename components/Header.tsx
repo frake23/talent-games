@@ -4,7 +4,7 @@ import Link from "next/link";
 import TWContainer from "./tailwind/TWContainer";
 import {TWButton, TWButtonColor, TWButtonSize} from "./tailwind/TWButton";
 
-const Header: React.FC = () => {
+const Header = () => {
     return (
         <div className="py-2.5 shadow">
             <TWContainer>
