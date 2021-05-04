@@ -44,7 +44,7 @@ module.exports = {
             fontFamily: 'Roboto',
             fontStyle: 'normal',
             fontWeight: 500,
-            fontSize: '60px',
+            fontSize: '56px',
             lineHeight: '70px',
             letterSpacing: '-0.005em'
           },

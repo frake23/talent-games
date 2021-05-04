@@ -1,13 +1,14 @@
 import React from 'react';
-import TWContainer from './TWContainer';
 
-const TWGrid: React.FC = ({children}) => {
+interface TWGridProps {
+    className?: string
+}
+
+const TWGrid: React.FC<TWGridProps> = ({children, className}) => {
     return (
-        <TWContainer>
-            <div className="lg:grid-cols-12 gap-4">
-                {children}
-            </div>
-        </TWContainer>
+        <div className={`grid lg:grid-cols-12 gap-4 ${className ?? ''}`}>
+            {children}
+        </div>
     )
 }
 
