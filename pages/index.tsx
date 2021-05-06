@@ -3,6 +3,9 @@ import {Header} from "../components/Header";
 import IntroSection from "../components/landing/IntroSection";
 import {SectionBase, SectionBaseLayout} from "../components/landing/SectionBase";
 import AllGames from "../components/landing/AllGames";
+import OutroSection from "../components/landing/OutroSection";
+import SectionWave from "../components/landing/SectionWave";
+import Footer from "../components/Footer";
 
 const LandingPage = () => {
     return (
@@ -20,6 +23,7 @@ const LandingPage = () => {
                     width="100%"
                 />
             </SectionBase>
+            <SectionWave/>
             <SectionBase
                 layout={SectionBaseLayout.ImageRight}
                 title="Доступные игры"
@@ -27,6 +31,7 @@ const LandingPage = () => {
             >
                 <AllGames/>
             </SectionBase>
+            <SectionWave reversed/>
             <SectionBase
                 layout={SectionBaseLayout.ImageLeft}
                 title="Как это работает"
@@ -38,6 +43,9 @@ const LandingPage = () => {
                     width="100%"
                 />
             </SectionBase>
+            <SectionWave/>
+            <OutroSection/>
+            <Footer/>
         </div>
     )
 }

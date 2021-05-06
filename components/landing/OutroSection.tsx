@@ -1,0 +1,43 @@
+import React from 'react';
+import TWContainer from "../tailwind/TWContainer";
+import TWRowGrid from "../tailwind/TWRowGrid";
+import {TWButton, TWButtonColor, TWButtonSize} from "../tailwind/TWButton";
+import Leaderboard from "./Leaderboard";
+
+const OutroSection = () => {
+    return (
+        <div className="py-32 bg-white">
+            <TWContainer>
+                <div className="flex flex-col text-center">
+                    <h2 className="text-h3 mb-8">
+                        Таблица лидеров
+                    </h2>
+                    <TWRowGrid>
+                        <span className="text-h6 mb-12 lg:col-span-10 lg:col-start-2">
+                        Соревнуйтесь с другими участниками проекта,
+                        чтобы стать лучше в вашей любимой игре, и соберите команду мечты из топовых игроков.
+                    </span>
+                    </TWRowGrid>
+
+                    <TWRowGrid>
+                        <Leaderboard className="lg:col-span-6 lg:col-start-4"/>
+                    </TWRowGrid>
+                    <h3 className="text-h4 mb-8">
+                        Готовы улучшить командное взаимодействие?
+                    </h3>
+                    <TWRowGrid>
+                        <TWButton
+                            color={TWButtonColor.Emerald}
+                            size={TWButtonSize.Big}
+                            className="lg:col-span-4 lg:col-start-5">
+                            Начать пользоваться
+                        </TWButton>
+                    </TWRowGrid>
+                </div>
+
+            </TWContainer>
+        </div>
+    )
+}
+
+export default OutroSection;

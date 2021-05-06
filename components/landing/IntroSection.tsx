@@ -6,7 +6,7 @@ import {TWButton, TWButtonColor, TWButtonSize} from "../tailwind/TWButton";
 const IntroSection = () => {
 
     return (
-        <div className="lg:py-40">
+        <div className="py-40">
             <TWContainer>
                 <div className="flex flex-col text-center">
                     <h1 className="text-h2 mb-8">Ваш помощник в командной игре</h1>
