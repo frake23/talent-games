@@ -18,8 +18,7 @@ const OutroSection = () => {
                         чтобы стать лучше в вашей любимой игре, и соберите команду мечты из топовых игроков.
                     </span>
                     </TWRowGrid>
-
-                    <TWRowGrid>
+                    <TWRowGrid className="mb-24">
                         <Leaderboard className="lg:col-span-6 lg:col-start-4"/>
                     </TWRowGrid>
                     <h3 className="text-h4 mb-8">
