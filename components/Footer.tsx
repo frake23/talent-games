@@ -2,6 +2,16 @@ import React from 'react';
 import Image from "next/image";
 import TWContainer from "./tailwind/TWContainer";
 
+const projects: { name: string, link: string }[] = [
+    {name: "Академия наставников", link: ""},
+    {name: "Конкурс Талант 20.35", link: ""},
+    {name: "Олимпиада КД НТИ", link: ""},
+    {name: "Фестиваль РУКАМИ", link: ""},
+    {name: "Карта Кружков", link: ""},
+    {name: "Кружковое движение", link: ""},
+    {name: "Практики будущего", link: ""}
+]
+
 const Footer = () => {
     return (
         <div className="py-8 flex flex-col shadow">
@@ -23,8 +33,14 @@ const Footer = () => {
                 </span>
                 </div>
                 <div className="flex justify-between items-center">
-                    <div>
-
+                    <div className="flex flex-col max-h-24 flex-wrap">
+                        {
+                            projects.map((project, index) =>
+                                <a className="text-caption text-blue-dark mb-2 mr-4" href={project.link} key={index}>
+                                    {project.name}
+                                </a>
+                            )
+                        }
                     </div>
                     <div className="flex flex-col items-end">
                         <div className="flex mb-2">
