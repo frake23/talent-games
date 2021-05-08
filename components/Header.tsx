@@ -2,7 +2,7 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import TWContainer from "./tailwind/TWContainer";
-import {TWButton, TWButtonColor, TWButtonSize} from "./tailwind/TWButton";
+import TWButton from "./tailwind/TWButton";
 
 const Header = () => {
     return (
@@ -17,7 +17,7 @@ const Header = () => {
                             height={40}
                         />
                     </Link>
-                    <TWButton color={TWButtonColor.Emerald} size={TWButtonSize.Default}>
+                    <TWButton color={'emerald'} size={'default'}>
                         Войти
                     </TWButton>
                 </div>

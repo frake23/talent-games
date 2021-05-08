@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface SectionWaveProps {
-    reversed?: boolean
-}
-
-const SectionWave = ({reversed = false}: SectionWaveProps) => {
+const SectionWave = ({reversed = false}: { reversed?: boolean }) => {
     return (
 
         <svg width="100%" viewBox="0 0 1920 160" fill="none" xmlns="http://www.w3.org/2000/svg"

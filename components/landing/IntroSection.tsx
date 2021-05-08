@@ -1,10 +1,9 @@
 import React from 'react';
 import TWContainer from "../tailwind/TWContainer";
 import TWRowGrid from "../tailwind/TWRowGrid";
-import {TWButton, TWButtonColor, TWButtonSize} from "../tailwind/TWButton";
+import TWButton from "../tailwind/TWButton";
 
 const IntroSection = () => {
-
     return (
         <div className="py-40">
             <TWContainer>
@@ -19,15 +18,15 @@ const IntroSection = () => {
                     </TWRowGrid>
                     <TWRowGrid>
                         <TWButton
-                            color={TWButtonColor.Emerald}
-                            size={TWButtonSize.Big}
+                            color={'emerald'}
+                            size={'big'}
                             className="lg:col-span-4 lg:col-start-3"
                         >
                             Начать пользоваться
                         </TWButton>
                         <TWButton
-                            color={TWButtonColor.DarkBlue}
-                            size={TWButtonSize.Big}
+                            color={'blue-dark'}
+                            size={'big'}
                             className="lg:col-span-4"
                         >
                             Изучить методологию

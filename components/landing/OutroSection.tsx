@@ -1,7 +1,7 @@
 import React from 'react';
 import TWContainer from "../tailwind/TWContainer";
 import TWRowGrid from "../tailwind/TWRowGrid";
-import {TWButton, TWButtonColor, TWButtonSize} from "../tailwind/TWButton";
+import TWButton from "../tailwind/TWButton";
 import Leaderboard from "./Leaderboard";
 
 const OutroSection = () => {
@@ -26,8 +26,8 @@ const OutroSection = () => {
                     </h3>
                     <TWRowGrid>
                         <TWButton
-                            color={TWButtonColor.Emerald}
-                            size={TWButtonSize.Big}
+                            color={'emerald'}
+                            size={'big'}
                             className="lg:col-span-4 lg:col-start-5">
                             Начать пользоваться
                         </TWButton>

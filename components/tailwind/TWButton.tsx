@@ -1,18 +1,8 @@
 import React from 'react';
 
-enum TWButtonColor {
-    Emerald = 'emerald',
-    DarkBlue = 'blue-dark'
-}
-
-enum TWButtonSize {
-    Default = 'default',
-    Big = 'big'
-}
-
 interface TWButtonProps {
-    color: TWButtonColor,
-    size: TWButtonSize,
+    color: 'emerald' | 'blue-dark',
+    size: 'default' | 'big',
     className?: string,
     children: string
 }
@@ -22,7 +12,7 @@ const TWButton = ({color, size, children, className}: TWButtonProps) => {
         <button
             className={`
                 px-4 
-                ${size === TWButtonSize.Default ? 'py-2.5 text-body2': 'py-4 text-subtitle1'} 
+                ${size === 'default' ? 'py-2.5 text-body2': 'py-4 text-subtitle1'} 
                 bg-${color} 
                 text-white 
                 ${className ?? ''}
@@ -34,4 +24,4 @@ const TWButton = ({color, size, children, className}: TWButtonProps) => {
     )
 }
 
-export {TWButton, TWButtonColor, TWButtonSize};
+export default TWButton;

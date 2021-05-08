@@ -1,20 +1,14 @@
 import React, {useCallback, useState} from 'react';
 import Image from "next/image";
-
-enum GameType {
-    CSGO = 'CS:GO',
-    Dota2 = 'Dota 2',
-    Overwatch = 'Overwatch'
-}
+import GameType from "../../types/games";
 
 interface GameInfo {
-    type: GameType,
     imageSrc: string,
     score: number,
     teamplay: string
 }
 
-const games = {
+const games: {[key: string]: GameInfo} = {
     [GameType.CSGO]: {
         imageSrc: '/assets/images/csgo.png',
         score: 67,
