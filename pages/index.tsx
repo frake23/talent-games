@@ -1,11 +1,11 @@
-import React from 'react';
-import {Header} from "../components/Header";
+import * as React from "react";
 import IntroSection from "../components/landing/IntroSection";
 import {SectionBase, SectionBaseLayout} from "../components/landing/SectionBase";
 import AllGames from "../components/landing/AllGames";
 import OutroSection from "../components/landing/OutroSection";
 import SectionWave from "../components/landing/SectionWave";
 import Footer from "../components/Footer";
+import {Header} from "../components/Header";
 
 const LandingPage = () => {
     return (
