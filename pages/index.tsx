@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import IntroSection from "../components/landing/IntroSection";
 import {SectionBase, SectionBaseLayout} from "../components/landing/SectionBase";
 import AllGames from "../components/landing/AllGames";

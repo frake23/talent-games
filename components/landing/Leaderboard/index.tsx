@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import LeaderboardItem from "./LeaderboardItem";
 
 const Leaderboard = ({className}: { className: string }) => {

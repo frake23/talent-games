@@ -1,15 +1,13 @@
-import {MouseEventHandler} from 'react';
-import * as React from "react";
+import React from 'react';
 
 interface TWButtonProps {
     color: 'emerald' | 'blue-dark',
     size: 'default' | 'big',
     className?: string,
-    children: string,
-    onClick?: MouseEventHandler
+    children: string
 }
 
-const TWButton = ({color, size, children, className, onClick}: TWButtonProps) => {
+const TWButton = ({color, size, children, className}: TWButtonProps) => {
     return (
         <button
             className={`
@@ -20,7 +18,6 @@ const TWButton = ({color, size, children, className, onClick}: TWButtonProps) =>
                 ${className ?? ''}
                 rounded-full
             `}
-            onClick={onClick}
         >
             {children}
         </button>

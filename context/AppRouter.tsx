@@ -49,8 +49,6 @@ const AppRouterReducer = (state: AppRouterState, action: AppRouterAction): AppRo
     }
 }
 
-
-
 const AppRouterContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer<React.Reducer<AppRouterState, AppRouterAction>>(AppRouterReducer, initialState);
 

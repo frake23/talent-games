@@ -1,8 +1,8 @@
+import React from 'react';
 import Image from "next/image";
 import TWContainer from "./tailwind/TWContainer";
-import * as React from "react";
 
-const projects = [
+const projects: { name: string, link: string }[] = [
     {name: "Академия наставников", link: ""},
     {name: "Конкурс Талант 20.35", link: ""},
     {name: "Олимпиада КД НТИ", link: ""},
