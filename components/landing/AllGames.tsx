@@ -1,6 +1,6 @@
 import React, {useCallback, useState} from 'react';
 import Image from "next/image";
-import GameType from "../../types/games";
+import GameType from "../../types/gameType";
 
 interface GameInfo {
     imageSrc: string,
