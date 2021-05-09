@@ -1,6 +1,6 @@
-import React from 'react';
 import TWRowGrid from "../tailwind/TWRowGrid";
 import TWContainer from "../tailwind/TWContainer";
+import * as React from "react";
 
 enum SectionBaseLayout {
     ImageLeft = 'image_left',

@@ -1,6 +1,7 @@
-import React, {createContext, useCallback, useContext, useState} from 'react';
+import {createContext, useCallback, useContext, useState} from 'react';
 import GameType from "../types/games";
 import AccountType from "../types/accounts";
+import * as React from "react";
 import App from "next/app";
 
 type AppRoute =
@@ -22,6 +23,7 @@ const AppRouterContext = createContext<AppRouterValue>(null);
 
 const useAppRouter = () => useContext<AppRouterValue>(AppRouterContext);
 
+// @ts-ignore
 const AppRouterContextProvider = ({ children }) => {
     const [route, setRoute] = useState<AppRoute>({
         category: "accounts",

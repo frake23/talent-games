@@ -1,7 +1,7 @@
-import React from 'react';
 import TWContainer from "../tailwind/TWContainer";
 import TWRowGrid from "../tailwind/TWRowGrid";
 import TWButton from "../tailwind/TWButton";
+import * as React from "react";
 
 const IntroSection = () => {
     return (

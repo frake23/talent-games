@@ -1,6 +1,7 @@
-import React, {useCallback, useState} from 'react';
+import {useCallback, useState} from 'react';
 import Image from "next/image";
 import GameType from "../../types/games";
+import * as React from "react";
 
 interface GameInfo {
     imageSrc: string,
