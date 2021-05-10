@@ -15,7 +15,7 @@ const initialState: AppRouterState = {
 }
 interface AppRouterValue {
     state: AppRouterState,
-    dispatch: React.Dispatch<any>
+    dispatch: React.Dispatch<AppRouterAction>
 }
 
 const AppRouterContext = createContext<AppRouterValue>(null);

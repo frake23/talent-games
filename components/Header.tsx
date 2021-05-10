@@ -6,7 +6,7 @@ import TWButton from "./tailwind/TWButton";
 
 const Header = () => {
     return (
-        <div className="py-2.5 shadow">
+        <div className="py-2.5 shadow z-50">
             <TWContainer>
                 <div className="flex justify-between">
                     <Link href="/">
