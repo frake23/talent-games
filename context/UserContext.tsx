@@ -49,7 +49,7 @@ const UserInfoProvider = ({ children }) => {
             })
             dispatch({type: "SET", payload: await user.json()})
         }
-        fetchData();
+        fetchData().catch(() => {});
     }, []);
     return (
         <UserInfoContext.Provider value={{state, dispatch}}>
