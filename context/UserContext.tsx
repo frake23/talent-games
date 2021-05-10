@@ -11,7 +11,7 @@ type UserInfo = {
 
 interface UserInfoValue {
     state: UserInfo,
-    dispatch: React.Dispatch<any>
+    dispatch: React.Dispatch<UserInfoAction>
 }
 
 const UserInfoContext = createContext<UserInfoValue>(null);
