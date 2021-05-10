@@ -17,7 +17,12 @@ const Header = () => {
                             height={40}
                         />
                     </Link>
-                    <TWButton color={'emerald'} size={'default'}>
+                    <TWButton color={'emerald'} size={'default'} onClick={()=>{
+                        fetch('http://localhost/api/auth/login/talent/', {redirect: 'manual'})
+                            .then((res) => {
+                                window.location.replace(res.url)
+                            })
+                    }}>
                         Войти
                     </TWButton>
                 </div>
