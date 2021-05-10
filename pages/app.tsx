@@ -17,9 +17,11 @@ const AppPage = () => {
                         <TWContainer>
                             <TWRowGrid>
                                 <SideMenu className="lg:col-span-3"/>
+                                <div className="lg:col-span-9 lg:col-start-4 flex flex-col">
+                                    // Тут меню + главное окно
+                                </div>
                             </TWRowGrid>
                         </TWContainer>
-
                     </div>
                     <Footer/>
                 </div>
