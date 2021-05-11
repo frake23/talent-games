@@ -18,6 +18,7 @@ const TWButton = ({color, size, children, className, onClick, href}: TWButtonPro
                     text-white 
                     ${className ?? ''}
                     rounded-full
+                    text-center
                 `
     return (
         !href

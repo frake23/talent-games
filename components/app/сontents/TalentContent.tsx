@@ -106,7 +106,12 @@ const TalentContent = ({className}: { className?: string }) => {
         return (
             <div className={`gap-y-2 flex flex-col items-center justify-center min-h-400`}>
                 <span>ПРИВЯЖИТЕ СВОЙ АККАУНТ TALENT ID</span>
-                <TWButton color={"emerald"} size={"big"}>Авторизоваться</TWButton>
+                <TWButton color={"emerald"} size={"default"} onClick={()=>{
+                    fetch('http://localhost/api/auth/login/talent/', {redirect: 'manual'})
+                        .then((res) => {
+                            router.push(res.url)
+                        })
+                }}>Авторизоваться</TWButton>
             </div>)
 
     }
