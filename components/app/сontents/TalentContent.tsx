@@ -3,9 +3,11 @@ import {useAppRouter} from "../../../context/AppRouter";
 import Image from "next/image";
 import TWButton from "../../tailwind/TWButton";
 import {useUserInfo} from "../../../context/UserContext";
+import {useRouter} from "next/router";
 
 const TalentContent = ({className}: { className?: string }) => {
-    const userInfo = useUserInfo()
+    const userInfo = useUserInfo();
+    const router = useRouter();
     const isAuthenticated = !!userInfo?.state?.email
     if (isAuthenticated) {
         return (
@@ -24,8 +26,14 @@ const TalentContent = ({className}: { className?: string }) => {
                         <span className={`text-overline`}>{`${userInfo.state?.email}`}</span>
                         <span className={`text-caption text-emerald`}>Talent ID: 158011</span>
                     </div>
-                    <TWButton color={"emerald"} size={"default"} className={"self-stretch"}>Изменить</TWButton>
-                    <TWButton color={"blue-dark"} size={"default"} className={"self-stretch"}>Выйти</TWButton>
+                    <TWButton href="https://talent.kruzhok.org/profile" color={"emerald"} size={"default"} className={"self-stretch"}>Изменить</TWButton>
+                    <TWButton onClick={()=>{
+                        fetch('http://localhost/api/logout/talent/', {credentials: 'include'})
+                            .then(() => {
+                                router.push('/')
+                            })
+                    }}
+                              color={"blue-dark"} size={"default"} className={"self-stretch"}>Выйти</TWButton>
                 </div>
                 <div className={`col-span-4`}>
                     <div className={`p-3 h-full border-2 border-emerald-secondary rounded-md`}>

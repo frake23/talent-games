@@ -4,7 +4,6 @@ import {useAppRouter} from "../../context/AppRouter";
 import AppCategory from "../../types/appCategory";
 import AccountType from "../../types/accountType";
 import GameType from "../../types/gameType";
-import {useSpring, animated} from "react-spring";
 
 const menuItems: {[key: string]: {
     images: {[key: string]: string},
@@ -35,10 +34,9 @@ menuItems[AppCategory.Leaderboard] = menuItems[AppCategory.Results];
 
 const ContentMenu = ({className}: {className?: string}) => {
     const {state, dispatch} = useAppRouter();
-    const styles = useSpring({from: {opacity: 0}, to: {opacity: 1}});
-
     return (
         <div className={`flex ${className} bg-white rounded-lg shadow-md px-2`}>
+
             {Object.keys(menuItems[state.category].images).map((key, index) =>
                 <div className="flex items-center" key={index}>
                     <div
@@ -48,13 +46,10 @@ const ContentMenu = ({className}: {className?: string}) => {
                     >
                         <Image src={menuItems[state.category].images[key]} height={128} width={96}/>
                         <span className="ml-2 text-body1">{key}</span>
-                        {key === state[menuItems[state.category].stateKey] ?
-                            <animated.div style={styles} className="absolute bottom-2 transition-opacity">
-                                <svg width="100%" height="5" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="0" y1="2.5" x2="90%" y2="2.5" stroke="#188E8E" strokeWidth="4"/>
-                                </svg>
-                            </animated.div> : null}
+                        {key === state[menuItems[state.category].stateKey] ?<svg className="absolute bottom-2 transition-opacity" width="100%" height="5" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0" y1="2.5" x2="90%" y2="2.5" stroke="#188E8E" strokeWidth="4"/>
+                        </svg> : null}
                     </div>
                     {index !== 2 ?<svg className="mx-2" width="1" height="128" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0" x2="0" y2="100%" stroke="#CBCBCB"/>
