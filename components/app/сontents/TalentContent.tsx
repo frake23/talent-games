@@ -9,7 +9,7 @@ const TalentContent = ({className}: {className?: string}) => {
     const isAuthenticated = !!userInfo?.state?.email
     if (isAuthenticated) {
         return (
-            <div className={`py-4 px-12 grid gap-x-2 lg:grid-cols-12 ${className} bg-white rounded-lg shadow-md`}>
+            <div className={`py-4 px-12 grid gap-x-2 lg:grid-cols-12 ${className} bg-white rounded-lg shadow-md min-h-400`}>
                 <div className={`col-span-4 gap-y-2 flex flex-col items-center`}>
                     <div className={`flex flex-col gap-y-2 py-2 self-stretch items-center border-2 border-emerald-secondary rounded-md`}>
                         <Image
@@ -92,8 +92,11 @@ const TalentContent = ({className}: {className?: string}) => {
             </div>
         )
     } else {
-        return <div className={`py-4 px-12 grid gap-x-2 lg:grid-cols-12 ${className} bg-white rounded-lg shadow-md min-h-400`}>
-
+        return <div className={`py-4 px-12 ${className} bg-white rounded-lg shadow-md`}>
+            <div className={`gap-y-2 flex flex-col items-center justify-center min-h-400`}>
+                <span>ПРИВЯЖИТЕ СВОЙ АККАУНТ TALENT ID</span>
+                <TWButton color={"emerald"} size={"big"}>Авторизоваться</TWButton>
+            </div>
         </div>
     }
 
