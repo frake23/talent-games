@@ -44,7 +44,7 @@ const UserInfoProvider = ({ children }) => {
     // We use useEffect to make API calls.
     useEffect(() => {
         async function fetchData() {
-            const user = await fetch('http://localhost/api/user/?format=json', {
+            const user = await fetch('http://game.nti-contest.ru/api/user/?format=json', {
                 credentials: 'include'
             })
             dispatch({type: "SET", payload: await user.json()})

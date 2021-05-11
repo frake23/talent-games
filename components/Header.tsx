@@ -10,7 +10,7 @@ const Header = () => {
     const isAuthenticated = !!userInfo?.state?.email
     const button = isAuthenticated?
         <TWButton color={'blue-dark'} size={'default'} onClick={()=>{
-            fetch('http://localhost/api/logout/talent/', {credentials: 'include'})
+            fetch('http://game.nti-contest.ru/api/logout/talent/', {credentials: 'include'})
                 .then(() => {
                     window.location.replace('/')
                 })
@@ -18,7 +18,7 @@ const Header = () => {
             Выйти
         </TWButton>:
         <TWButton color={'emerald'} size={'default'} onClick={()=>{
-            fetch('http://localhost/api/auth/login/talent/', {redirect: 'manual'})
+            fetch('http://game.nti-contest.ru/api/auth/login/talent/', {redirect: 'manual'})
                 .then((res) => {
                     window.location.replace(res.url)
                 })
