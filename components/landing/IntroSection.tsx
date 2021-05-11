@@ -5,7 +5,7 @@ import TWButton from "../tailwind/TWButton";
 
 const IntroSection = () => {
     return (
-        <div className="py-40">
+        <div className="py-40" style={{backgroundImage: "url(/assets/images/background_game.gif)"}}>
             <TWContainer>
                 <div className="flex flex-col text-center">
                     <h1 className="text-h2 mb-8">Ваш помощник в командной игре</h1>
