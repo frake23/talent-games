@@ -6,7 +6,7 @@ interface TWButtonProps {
     onClick?: MouseEventHandler,
     className?: string,
     children: string,
-    href?: "string"
+    href?: string
 }
 
 const TWButton = ({color, size, children, className, onClick, href}: TWButtonProps) => {
