@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import TWRowGrid from "../components/tailwind/TWRowGrid";
 import SideMenu from "../components/app/SideMenu";
 import TWContainer from "../components/tailwind/TWContainer";
+import Content from "../components/app/Content";
 
 const AppPage = () => {
     return (
@@ -19,6 +20,7 @@ const AppPage = () => {
                                 <SideMenu className="lg:col-span-3"/>
                                 <div className="lg:col-span-9 lg:col-start-4 flex flex-col">
                                     // Тут меню + главное окно
+                                    <Content/>
                                 </div>
                             </TWRowGrid>
                         </TWContainer>
