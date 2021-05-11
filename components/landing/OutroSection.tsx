@@ -3,8 +3,11 @@ import TWContainer from "../tailwind/TWContainer";
 import TWRowGrid from "../tailwind/TWRowGrid";
 import TWButton from "../tailwind/TWButton";
 import Leaderboard from "./Leaderboard";
+import {useRouter} from "next/router";
 
 const OutroSection = () => {
+    const router = useRouter();
+
     return (
         <div className="py-32 bg-white">
             <TWContainer>
@@ -28,7 +31,14 @@ const OutroSection = () => {
                         <TWButton
                             color={'emerald'}
                             size={'big'}
-                            className="lg:col-span-4 lg:col-start-5">
+                            className="lg:col-span-4 lg:col-start-5"
+                            onClick={()=>{
+                                fetch('http://localhost/api/auth/login/talent/', {redirect: 'manual'})
+                                    .then((res) => {
+                                        router.push(res.url)
+                                    })
+                            }}
+                        >
                             Начать пользоваться
                         </TWButton>
                     </TWRowGrid>

@@ -2,8 +2,10 @@ import React from 'react';
 import TWContainer from "../tailwind/TWContainer";
 import TWRowGrid from "../tailwind/TWRowGrid";
 import TWButton from "../tailwind/TWButton";
+import {useRouter} from "next/router";
 
 const IntroSection = () => {
+    const router = useRouter();
     return (
         <div className="py-40" style={{backgroundImage: "url(/assets/images/background_game.gif)"}}>
             <TWContainer>
@@ -21,13 +23,21 @@ const IntroSection = () => {
                             color={'emerald'}
                             size={'big'}
                             className="lg:col-span-4 lg:col-start-3"
+                            onClick={()=>{
+                                fetch('http://localhost/api/auth/login/talent/', {redirect: 'manual'})
+                                    .then((res) => {
+                                        router.push(res.url)
+                                    })
+                            }}
                         >
                             Начать пользоваться
                         </TWButton>
+
                         <TWButton
                             color={'blue-dark'}
                             size={'big'}
                             className="lg:col-span-4"
+                            href="https://docs.google.com/document/d/1IwWm6Q8i1KKtXixOBLRHGdVFGnyyXB4gWyGjBzeGcQU/edit#heading=h.tvmaq5m29558"
                         >
                             Изучить методологию
                         </TWButton>

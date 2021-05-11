@@ -5,25 +5,40 @@ interface TWButtonProps {
     size: 'default' | 'big',
     onClick?: MouseEventHandler,
     className?: string,
-    children: string
+    children: string,
+    href?: "string"
 }
 
-const TWButton = ({color, size, children, className, onClick}: TWButtonProps) => {
+const TWButton = ({color, size, children, className, onClick, href}: TWButtonProps) => {
+    const classes = `
+                    px-4 
+                    ${size === 'default' ? 'py-2.5 text-body2': 'py-4 text-subtitle1'} 
+                    bg-${color} hover:bg-${color}-hover transition-colors
+                    hover:shadow-md transition-hover transition-duration-250
+                    text-white 
+                    ${className ?? ''}
+                    rounded-full
+                `
     return (
-        <button
-            onClick={onClick}
-            className={`
-                px-4 
-                ${size === 'default' ? 'py-2.5 text-body2': 'py-4 text-subtitle1'} 
-                bg-${color} hover:bg-${color}-hover transition-colors
-                hover:shadow-md transition-hover transition-duration-250
-                text-white 
-                ${className ?? ''}
-                rounded-full
-            `}
-        >
-            {children}
-        </button>
+        !href
+            ?
+            <button
+                onClick={onClick}
+                className={classes}
+            >
+                {children}
+            </button>
+            :
+            <a
+                href={href}
+                onClick={onClick}
+                className={`
+                    ${classes}
+                    cursor-pointer
+                `}
+            >
+                {children}
+            </a>
     )
 }
 
