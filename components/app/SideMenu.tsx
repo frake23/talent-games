@@ -16,7 +16,7 @@ const SideMenu = ({className}: {className?: string}) => {
             {Object.keys(categories).map((key, index) =>
                 <div className={`flex 
                                 justify-between 
-                                text-subtitle1 
+                                text-subtitle1
                                 text-${state.category === key ? 'emerald-secondary' : 'black'}
                                 py-4
                                 cursor-pointer
