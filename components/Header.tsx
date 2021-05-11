@@ -4,15 +4,17 @@ import Link from "next/link";
 import TWContainer from "./tailwind/TWContainer";
 import TWButton from "./tailwind/TWButton";
 import {useUserInfo} from "../context/UserContext";
+import {useRouter} from "next/router";
 
 const Header = () => {
+    const router = useRouter();
     const userInfo = useUserInfo()
     const isAuthenticated = !!userInfo?.state?.email
     const button = isAuthenticated?
         <TWButton color={'blue-dark'} size={'default'} onClick={()=>{
             fetch('http://localhost/api/logout/talent/', {credentials: 'include'})
                 .then(() => {
-                    window.location.replace('/')
+                    router.push('/')
                 })
         }}>
             Выйти
@@ -20,7 +22,7 @@ const Header = () => {
         <TWButton color={'emerald'} size={'default'} onClick={()=>{
             fetch('http://localhost/api/auth/login/talent/', {redirect: 'manual'})
                 .then((res) => {
-                    window.location.replace(res.url)
+                    router.push(res.url)
                 })
         }}>
             Войти

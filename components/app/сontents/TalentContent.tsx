@@ -24,15 +24,15 @@ const TalentContent = ({className}: { className?: string }) => {
                         <span className={`text-overline`}>{`${userInfo.state?.email}`}</span>
                         <span className={`text-caption text-emerald`}>Talent ID: 158011</span>
                     </div>
-                    <TWButton color={"emerald"} size={"big"} className={"self-stretch"}>Изменить</TWButton>
-                    <TWButton color={"blue-dark"} size={"big"} className={"self-stretch"}>Выйти</TWButton>
+                    <TWButton color={"emerald"} size={"default"} className={"self-stretch"}>Изменить</TWButton>
+                    <TWButton color={"blue-dark"} size={"default"} className={"self-stretch"}>Выйти</TWButton>
                 </div>
                 <div className={`col-span-4`}>
                     <div className={`p-3 h-full border-2 border-emerald-secondary rounded-md`}>
                         <h2 className={`text-subtitle2 text-center pb-2`}>
                             Личные данные
                         </h2>
-                        <div className={`grid grid-cols-12 text-overline gap-x-1`}>
+                        <div className={`grid grid-cols-12 text-caption gap-x-1`}>
                             <div className={`col-span-5 grid grid-rows-4`}>
                             <span className={`row-span-1`}>
                                 ФИО
@@ -65,7 +65,7 @@ const TalentContent = ({className}: { className?: string }) => {
                         <h2 className={`text-subtitle2 text-center pt-3 pb-2`}>
                             О себе
                         </h2>
-                        <div className={`grid grid-cols-12 text-overline gap-x-1`}>
+                        <div className={`grid grid-cols-12 text-caption gap-x-1`}>
                             <div className={`col-span-4 grid grid-rows-2`}>
                             <span className={`row-span-1`}>
                                 Интересы
