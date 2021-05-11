@@ -22,8 +22,8 @@ const Content = ({className}: {className?: string}) => {
                     <span className={`text-overline`}>{`${userInfo.state?.email}`}</span>
                     <span className={`text-caption text-emerald`}>Talent ID: 158011</span>
                 </div>
-                <TWButton color={"emerald"} size={"big"} className={"self-stretch"}>Изменить</TWButton>
-                <TWButton color={"blue-dark"} size={"big"} className={"self-stretch"}>Выйти</TWButton>
+                <TWButton color={"emerald"} size={"default"} className={"self-stretch"}>Изменить</TWButton>
+                <TWButton color={"blue-dark"} size={"default"} className={"self-stretch"}>Выйти</TWButton>
             </div>
             <div className={`col-span-4`}>
                 b
