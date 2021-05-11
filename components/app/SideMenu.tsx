@@ -20,6 +20,7 @@ const SideMenu = ({className}: {className?: string}) => {
                                 text-${state.category === key ? 'emerald-secondary' : 'black'}
                                 py-4
                                 cursor-pointer
+                                select-none
                                `}
                      onClick={() => dispatch({type: "SET_CATEGORY", payload: key as AppCategory})}
                 >

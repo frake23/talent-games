@@ -16,11 +16,13 @@ module.exports = {
       emerald: {
         DEFAULT: "#188E8E",
         light: "#EDFFFB",
-        secondary: "#48BABA"
+        secondary: "#48BABA",
+        hover: "#4CA2A8"
       },
       blue: {
         dark: "#1C2554",
-        light: "#F8FFFF"
+        light: "#F8FFFF",
+        "dark-hover": "#3B4787"
       },
       white: "#ffffff"
     },

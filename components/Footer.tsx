@@ -3,13 +3,13 @@ import Image from "next/image";
 import TWContainer from "./tailwind/TWContainer";
 
 const projects: { name: string, link: string }[] = [
-    {name: "Академия наставников", link: ""},
-    {name: "Конкурс Талант 20.35", link: ""},
-    {name: "Олимпиада КД НТИ", link: ""},
-    {name: "Фестиваль РУКАМИ", link: ""},
-    {name: "Карта Кружков", link: ""},
-    {name: "Кружковое движение", link: ""},
-    {name: "Практики будущего", link: ""}
+    {name: "Академия наставников", link: "https://academy.sk.ru/"},
+    {name: "Конкурс Талант 20.35", link: "https://talent2035.nti-contest.ru/"},
+    {name: "Олимпиада КД НТИ", link: "https://reg.nti-contest.ru/"},
+    {name: "Фестиваль РУКАМИ", link: "https://rukamifest.com/about"},
+    {name: "Карта Кружков", link: "https://map.kruzhok.org/"},
+    {name: "Кружковое движение", link: "http://team.kruzhok.org/"},
+    {name: "Практики будущего", link: "https://practicingfutures.org/"}
 ]
 
 const Footer = () => {

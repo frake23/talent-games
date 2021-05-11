@@ -15,7 +15,8 @@ const TWButton = ({color, size, children, className, onClick}: TWButtonProps) =>
             className={`
                 px-4 
                 ${size === 'default' ? 'py-2.5 text-body2': 'py-4 text-subtitle1'} 
-                bg-${color} 
+                bg-${color} hover:bg-${color}-hover transition-colors
+                hover:shadow-md transition-hover
                 text-white 
                 ${className ?? ''}
                 rounded-full
