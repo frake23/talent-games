@@ -59,4 +59,6 @@ const AppRouterContextProvider = ({ children }) => {
     )
 }
 
-export {AppRouterContextProvider, useAppRouter}
+export {AppRouterContextProvider, useAppRouter};
+export type { AppRouterState };
+

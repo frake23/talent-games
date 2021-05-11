@@ -1,102 +1,38 @@
 import React from 'react';
-import {useAppRouter} from "../../context/AppRouter";
-import Image from "next/image";
-import TWButton from "../tailwind/TWButton";
-import {useUserInfo} from "../../context/UserContext";
+import {AppRouterState, useAppRouter} from "../../context/AppRouter";
+import AppCategory from "../../types/appCategory";
+import AccountType from "../../types/accountType";
+import TalentContent from "./сontents/TalentContent";
+
+const contents = (state: AppRouterState) => {
+    switch (state.category) {
+        case AppCategory.Accounts:
+            switch (state.account) {
+                case AccountType.Kruzhok:
+                    return <TalentContent/>
+                default:
+                    return <p>404</p>
+            }
+        case AppCategory.Results:
+            switch (state.account) {
+                case AccountType.Kruzhok:
+                    return <TalentContent/>
+                default:
+                    return <p>404</p>
+            }
+        case AppCategory.Leaderboard:
+            switch (state.account) {
+                case AccountType.Kruzhok:
+                    return <TalentContent/>
+                default:
+                    return <p>404</p>
+            }
+    }
+}
 
 const Content = ({className}: {className?: string}) => {
     const {state, dispatch} = useAppRouter();
-    const userInfo = useUserInfo()
-    const isAuthenticated = !!userInfo?.state?.email
-    if (isAuthenticated) {
-        return (
-            <div className={`py-4 px-12 grid gap-x-2 lg:grid-cols-12 ${className} bg-white rounded-lg shadow-md`}>
-                <div className={`col-span-4 gap-y-2 flex flex-col items-center`}>
-                    <div className={`flex flex-col gap-y-2 py-2 self-stretch items-center border-2 border-emerald-secondary rounded-md`}>
-                        <Image
-                            className="cursor-pointer"
-                            src="/assets/icons/camera_icon.svg"
-                            width={40}
-                            height={40}
-                        />
-                        <span className={`text-body2`}>{`${userInfo.state?.last_name} ${userInfo.state?.first_name[0]}.`}</span>
-                        <span className={`text-overline`}>{`${userInfo.state?.email}`}</span>
-                        <span className={`text-caption text-emerald`}>Talent ID: 158011</span>
-                    </div>
-                    <TWButton color={"emerald"} size={"big"} className={"self-stretch"}>Изменить</TWButton>
-                    <TWButton color={"blue-dark"} size={"big"} className={"self-stretch"}>Выйти</TWButton>
-                </div>
-                <div className={`col-span-4`}>
-                    <div className={`p-3 h-full border-2 border-emerald-secondary rounded-md`}>
-                        <h2 className={`text-subtitle2 text-center pb-2`}>
-                            Личные данные
-                        </h2>
-                        <div className={`grid grid-cols-12 text-overline gap-x-1`}>
-                            <div className={`col-span-5 grid grid-rows-4`}>
-                            <span className={`row-span-1`}>
-                                ФИО
-                            </span>
-                                <span className={`row-span-1`}>
-                                Дата рождения
-                            </span>
-                                <span className={`row-span-1`}>
-                                Пол
-                            </span>
-                                <span className={`row-span-1`}>
-                                Адрес
-                            </span>
-                            </div>
-                            <div className={`col-span-7 grid grid-rows-4 gap-y-2`}>
-                            <span className={`row-span-1`}>
-                                {`${userInfo.state.last_name} ${userInfo.state.first_name}`}
-                            </span>
-                                <span className={`row-span-1`}>
-                                22.12.1992
-                            </span>
-                                <span className={`row-span-1`}>
-                                М
-                            </span>
-                                <span className={`row-span-1`}>
-                                Россия, г. Москва
-                            </span>
-                            </div>
-                        </div>
-                        <h2 className={`text-subtitle2 text-center pt-3 pb-2`}>
-                            О себе
-                        </h2>
-                        <div className={`grid grid-cols-12 text-overline gap-x-1`}>
-                            <div className={`col-span-4 grid grid-rows-2`}>
-                            <span className={`row-span-1`}>
-                                Интересы
-                            </span>
-                                <span className={`row-span-1`}>
-                                Описание
-                            </span>
-                            </div>
-                            <div className={`col-span-8 grid grid-rows-2 gap-y-2`}>
-                            <span className={`row-span-1`}>
-                                #Компьютерные игры, #Программирование
-                            </span>
-                                <span className={`row-span-1`}>
-                                Занимаюсь программированием, дизайном, играю в игры.
-                            </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className={`col-span-4`}>
-                    <div className={`flex flex-col gap-y-2 py-2 items-center border-2 border-emerald-secondary rounded-md`}>
-                        <span className={`text-body2`}>Социальные сети</span>
-                        <span className={`text-overline`}>{`${userInfo.state?.email}`}</span>
-                    </div>
-                </div>
-            </div>
-        )
-    } else {
-        return <div className={`py-4 px-12 grid gap-x-2 lg:grid-cols-12 ${className} bg-white rounded-lg shadow-md min-h-400`}>
-
-        </div>
-    }
+    return contents(state)
 
 }
 
