@@ -38,9 +38,9 @@ const ContentMenu = ({className}: {className?: string}) => {
     return (
         <div className={`flex ${className} bg-white rounded-lg shadow-md px-2`}>
             {Object.keys(menuItems[state.category].images).map((key, index) =>
-                <div className="flex items-center">
+                <div className="flex items-center" key={index}>
                     <div
-                        className="flex p-4 items-center cursor-pointer relative"
+                        className="flex p-4 items-center cursor-pointer relative select-none"
                         key={index}
                         onClick={() => dispatch({type: menuItems[state.category].action, payload: key as GameType | AccountType})}
                     >
