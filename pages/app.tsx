@@ -17,9 +17,8 @@ const AppPage = () => {
                     <div className="flex-1 py-16 bg-blue-light">
                         <TWContainer>
                             <TWRowGrid>
-                                <SideMenu className="lg:col-span-3"/>
+                                <SideMenu className="lg:col-span-3 self-start"/>
                                 <div className="lg:col-span-9 lg:col-start-4 flex flex-col">
-                                    // Тут меню + главное окно
                                     <Content/>
                                 </div>
                             </TWRowGrid>
