@@ -1,7 +1,13 @@
 ## Getting Started
 
-First, run the development server:
+packages
+```bash
+npm install
+# or
+yarn upgrade
+```
 
+start
 ```bash
 npm run dev
 # or
