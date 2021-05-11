@@ -15,9 +15,9 @@ const AppPage = () => {
             <UserInfoProvider>
                 <div className="flex flex-col min-h-screen">
                     <Header/>
-                    <div className="flex-1 py-16 bg-blue-light">
-                        <TWContainer className="h-ful">
-                            <TWRowGrid>
+                    <div className="flex-1 py-16 bg-blue-light flex flex-col">
+                        <TWContainer className="flex-1">
+                            <TWRowGrid className="">
                                 <SideMenu className="lg:col-span-3 self-start"/>
                                 <div className="lg:col-span-9 lg:col-start-4 flex flex-col">
                                     <ContentMenu className="mb-4"/>

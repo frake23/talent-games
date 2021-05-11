@@ -9,9 +9,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
-    minHeight: {
-      "400": "400px"
-    },
     colors: {
       emerald: {
         DEFAULT: "#188E8E",

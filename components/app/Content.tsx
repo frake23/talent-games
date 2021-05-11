@@ -47,7 +47,11 @@ const contents = (state: AppRouterState) => {
 
 const Content = ({className}: {className?: string}) => {
     const {state, dispatch} = useAppRouter();
-    return contents(state)
+    return (
+        <div className={`py-4 px-12 ${className} bg-white rounded-lg shadow-md`}>
+            {contents(state)}
+        </div>
+    )
 
 }
 
