@@ -13,7 +13,7 @@ const TWButton = ({color, size, children, className, onClick, href}: TWButtonPro
     const classes = `
                     px-4 
                     ${size === 'default' ? 'py-2.5 text-body2': 'py-4 text-subtitle1'} 
-                    bg-${color} hover:bg-${color}-hover transition-colors
+                    ${'bg-'+color} ${'hover:bg-'+color+'-hover'} transition-colors
                     hover:shadow-md transition-hover duration-200
                     text-white 
                     ${className ?? ''}
