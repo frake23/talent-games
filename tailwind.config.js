@@ -7,6 +7,7 @@ delete containerScreens['2xl'];
 
 
 module.exports = {
+  mode: "jit",
   purge: [
     './public/**/*.html',
     './pages/**/*.{js,ts,jsx,tsx}',
