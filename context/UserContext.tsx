@@ -1,7 +1,4 @@
 import React, {useReducer, useEffect, createContext, useContext} from 'react';
-import AppCategory from "../types/appCategory";
-import GameType from "../types/gameType";
-import AccountType from "../types/accountType";
 
 type UserInfo = {
     email: string,

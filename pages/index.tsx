@@ -6,10 +6,15 @@ import OutroSection from "../components/landing/OutroSection";
 import SectionWave from "../components/landing/SectionWave";
 import Footer from "../components/Footer";
 import {Header} from "../components/Header";
+import Head from "next/head";
 
 const LandingPage = () => {
     return (
         <div className="min-h-screen">
+            <Head>
+                <link rel="icon" href="/assets/icons/icon.svg"/>
+                <title>Талант Games</title>
+            </Head>
             <Header/>
             <IntroSection/>
             <SectionBase

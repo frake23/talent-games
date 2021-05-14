@@ -8,10 +8,15 @@ import SideMenu from "../components/app/SideMenu";
 import TWContainer from "../components/tailwind/TWContainer";
 import Content from "../components/app/Content";
 import ContentMenu from "../components/app/ContentMenu";
+import Head from "next/head";
 
 const AppPage = () => {
     return (
         <AppRouterContextProvider>
+            <Head>
+                <link rel="icon" href="/assets/icons/icon.svg"/>
+                <title>Талант Games</title>
+            </Head>
             <UserInfoProvider>
                 <div className="flex flex-col min-h-screen">
                     <Header/>
