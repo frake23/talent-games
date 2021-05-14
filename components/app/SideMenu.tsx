@@ -21,6 +21,7 @@ const SideMenu = ({className}: {className?: string}) => {
                                 py-4
                                 cursor-pointer
                                 select-none
+                                transition-colors
                                `}
                      onClick={() => dispatch({type: "SET_CATEGORY", payload: key as AppCategory})}
                 >

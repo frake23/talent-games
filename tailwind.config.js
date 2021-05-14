@@ -8,11 +8,17 @@ delete containerScreens['2xl'];
 
 module.exports = {
   mode: "jit",
-  purge: [
-    './public/**/*.html',
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-  ],
+  purge: {
+    content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+    options: {
+      safelist: [
+        'bg-emerald',
+        'hover:bg-emerald-hover',
+        'bg-blue-dark',
+        'hover:bg-blue-dark-hover'
+      ]
+    }
+  },
   darkMode: false,
   theme: {
     extend: {},
