@@ -5,8 +5,12 @@ const containerScreens = Object.assign({}, defaultTheme.screens);
 delete containerScreens['2xl'];
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  mode: "jit",
+  purge: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: false,
   theme: {
     extend: {},
     colors: {
