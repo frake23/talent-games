@@ -7,7 +7,8 @@ delete containerScreens['2xl'];
 module.exports = {
   purge: [
     './public/**/*.html',
-    './**/*.{js,jsx,ts,tsx,vue}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: false,
   theme: {
