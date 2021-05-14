@@ -17,6 +17,7 @@ const AppPage = () => {
                 <link rel="icon" href="/assets/icons/icon.svg"/>
                 <title>Талант Games</title>
             </Head>
+            <div className="bg-emerald bg-blue-dark hover:bg-emerald-hover hover:bg-blue-dark-hover" style={{display: 'none', visibility: 'hidden'}}/>
             <UserInfoProvider>
                 <div className="flex flex-col min-h-screen">
                     <Header/>
