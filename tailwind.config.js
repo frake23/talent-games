@@ -4,6 +4,8 @@ const plugin = require('tailwindcss/plugin');
 const containerScreens = Object.assign({}, defaultTheme.screens);
 delete containerScreens['2xl'];
 
+
+
 module.exports = {
   purge: [
     './public/**/*.html',
