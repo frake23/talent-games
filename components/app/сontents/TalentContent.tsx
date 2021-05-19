@@ -28,7 +28,7 @@ const TalentContent = ({className}: { className?: string }) => {
                     </div>
                     <TWButton href="https://talent.kruzhok.org/profile" color={"emerald"} size={"default"} className={"self-stretch"}>Изменить</TWButton>
                     <TWButton onClick={()=>{
-                        fetch('http://localhost/api/logout/talent/', {credentials: 'include'})
+                        fetch(process.env.BACKEND + '/api/logout/talent/', {credentials: 'include'})
                             .then(() => {
                                 router.push('/')
                             })
@@ -107,7 +107,7 @@ const TalentContent = ({className}: { className?: string }) => {
             <div className={`gap-y-2 flex flex-col items-center justify-center min-h-400`}>
                 <span>ПРИВЯЖИТЕ СВОЙ АККАУНТ TALENT ID</span>
                 <TWButton color={"emerald"} size={"default"} onClick={()=>{
-                    fetch('http://localhost/api/auth/login/talent/', {redirect: 'manual'})
+                    fetch(process.env.BACKEND + '/api/auth/login/talent/', {redirect: 'manual'})
                         .then((res) => {
                             router.push(res.url)
                         })
